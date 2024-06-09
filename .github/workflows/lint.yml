@@ -20,10 +20,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-            node-version: '18'
+          node-version: '18' # Asegúrate de que estás usando una versión compatible con ESLint 9
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run ESLint
-        run: npx eslint . --ext .js,.jsx,.ts,.tsx,.vue
+        run: npx eslint .
